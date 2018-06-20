@@ -53,4 +53,4 @@ def crawler():
 
 	return rowdata, urldata
 
-app.run(debug = True
+app.run(debug = True)
