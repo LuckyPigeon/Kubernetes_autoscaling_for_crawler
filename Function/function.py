@@ -50,6 +50,7 @@ def crawler():
 	
 	for i in range(len(urldata)):
 		cursor.execute(query, inputs, urldata[i], rowdata[i])
+		conn.commit()
 
 	return rowdata, urldata
 
