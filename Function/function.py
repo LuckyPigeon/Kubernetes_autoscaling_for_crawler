@@ -1,4 +1,4 @@
-import re, sys, threading, mysql.connector
+import os, re, sys, threading, mysql.connector
 from urllib.request import urlopen
 from selenium import webdriver
 from bs4 import BeautifulSoup
@@ -6,6 +6,8 @@ from flask import Flask, request
 
 '''Constant url'''
 url = 'https://www.youtube.com/results?search_query='
+CRAWLER_HOST = os.environ['CRAWLER_HOST'] CRAWLER_USER = os.environ['CRAWLER_USER']
+CRAWLER_PASSWORD = os.environ['CRAWLER_PASSWORD']
 
 app = Flask(__name__)
 
@@ -43,7 +45,7 @@ def crawler():
 	rowdata = [re.sub('}}', '', x) for x in rowdata]
 	rowdata = [re.sub(r'\\u0026', '', x) for x in rowdata]
 
-	conn = mysql.connector.connect(host = 'localhost', database = 'Crawler', user = 'luckypigeon', password = 'lucky90322')
+	conn = mysql.connector.connect(host = CRAWLER_HOST, database = 'Crawler', user = CRAWLER_USER, password = CRAWLER_PASSWORD)
 	cursor = conn.cursor()
 
 	query = "INSERT INTO result(keyword, url, title) VALUES(%s, %s, %s)"

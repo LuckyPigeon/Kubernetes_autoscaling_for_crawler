@@ -1,8 +1,9 @@
 FROM ubuntu
-COPY ./function.py ./function
+COPY . /function
 WORKDIR /function
 RUN apt-get update
-RUN pip3 install selenium
-RUN pip3 install bs4
+RUN apt-get -y install python3-pip
+RUN apt-get update
+RUN pip3 install -r requirements.txt
 EXPOSE 3000
-CMD python3 function.py LSA.txt
+CMD python3 functioon.py
