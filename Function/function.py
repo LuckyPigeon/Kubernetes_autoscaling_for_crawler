@@ -1,22 +1,29 @@
 import os, re, sys, threading, mysql.connector
 from urllib.request import urlopen
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 from flask import Flask, request
+import json
 
 '''Constant url'''
 url = 'https://www.youtube.com/results?search_query='
-CRAWLER_HOST = os.environ['CRAWLER_HOST'] CRAWLER_USER = os.environ['CRAWLER_USER']
+CRAWLER_HOST = os.environ['CRAWLER_HOST'] 
+CRAWLER_USER = os.environ['CRAWLER_USER']
 CRAWLER_PASSWORD = os.environ['CRAWLER_PASSWORD']
 
 app = Flask(__name__)
 
-@app.route('crawler', method=['GET'])
+@app.route('/crawler', methods=['GET'])
 def crawler():
 	inputs = request.args.get('text')
 
 	'''Driver'''
-	driver = webdriver.Chrome('./chromedriver')
+	
+	chrome_options = webdriver.ChromeOptions()
+	chrome_options.add_argument("--headless")
+	chrome_options.add_argument('--disable-gpu')
+	driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='./chromedriver')
 	driver.get(url + inputs)
 	# driver.get(inputs)
 
@@ -47,13 +54,12 @@ def crawler():
 
 	conn = mysql.connector.connect(host = CRAWLER_HOST, database = 'Crawler', user = CRAWLER_USER, password = CRAWLER_PASSWORD)
 	cursor = conn.cursor()
-
-	query = "INSERT INTO result(keyword, url, title) VALUES(%s, %s, %s)"
-	
-	for i in range(len(urldata)):
-		cursor.execute(query, inputs, urldata[i], rowdata[i])
+	query = "INSERT INTO result(keyword, url, title) VALUES(%s, %s, %s)"	
+	for i in range(len(rowdata)-1):
+		args = (inputs, urldata[i], rowdata[i])
+		cursor.execute(query, args)
 		conn.commit()
 
-	return rowdata, urldata
+	return json.dumps(rowdata)
 
-app.run(debug = True)
+app.run(debug = True, host='0.0.0.0')
