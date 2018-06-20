@@ -3,15 +3,17 @@ from urllib.request import urlopen
 from selenium import webdriver
 from bs4 import BeautifulSoup
 from flask import Flask, request
+import json
 
 '''Constant url'''
 url = 'https://www.youtube.com/results?search_query='
-CRAWLER_HOST = os.environ['CRAWLER_HOST'] CRAWLER_USER = os.environ['CRAWLER_USER']
+CRAWLER_HOST = os.environ['CRAWLER_HOST'] 
+CRAWLER_USER = os.environ['CRAWLER_USER']
 CRAWLER_PASSWORD = os.environ['CRAWLER_PASSWORD']
 
 app = Flask(__name__)
 
-@app.route('crawler', method=['GET'])
+@app.route('/crawler', methods=['GET'])
 def crawler():
 	inputs = request.args.get('text')
 
@@ -48,12 +50,12 @@ def crawler():
 	conn = mysql.connector.connect(host = CRAWLER_HOST, database = 'Crawler', user = CRAWLER_USER, password = CRAWLER_PASSWORD)
 	cursor = conn.cursor()
 
-	query = "INSERT INTO result(keyword, url, title) VALUES(%s, %s, %s)"
-	
-	for i in range(len(urldata)):
-		cursor.execute(query, inputs, urldata[i], rowdata[i])
+	query = "INSERT INTO result(keyword, url, title) VALUES(%s, %s, %s)"	
+	for i in range(len(rowdata)-1):
+		args = (inputs, urldata[i], rowdata[i])
+		cursor.execute(query, args)
 		conn.commit()
 
-	return rowdata, urldata
+	return json.dumps(rowdata)
 
 app.run(debug = True)
