@@ -24,12 +24,12 @@ Using kubernetes to autoscale crawler doing crawling
 * ![](https://i.imgur.com/r530iIK.png)
 
 ### 踩雷
-* --pod-cidr flannel network
+* --pod-cidr flannel network -> flannel network should match the pod network CIDR
 * [kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) -> 讓隱私資料以加密的方式呈現
 * [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) -> 讓Kubernetes的pods可以共享資料
 * mysql CrashLoopBackOff -> 沒打帳號密碼
 * [HPA Current CPU Utilization:%](https://github.com/kubernetes-incubator/kube-aws/issues/549)
-* emoji
+* emoji -> mysql預設是latin1，只要一碰到中文字或是emoji就炸了
 * [build dockerfile的時候解析不出domain name](https://goo.gl/D3qWQ7) -> DNS 8.8.8.8 出了點狀況
 * [Docker build with Flask](http://containertutorials.com/docker-compose/flask-simple-app.html)
 * headless chrome -> 無視窗開啟Chrome，在selenium driver 設定上也要設定disable-gpu
