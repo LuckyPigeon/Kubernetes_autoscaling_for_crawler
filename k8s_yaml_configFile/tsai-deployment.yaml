@@ -1,0 +1,22 @@
+apiVersion: apps/v1 # for kubectl versions >= 1.9.0 use apps/v1
+kind: Deployment
+metadata:
+  name: tsai-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: tsai-deployment
+  template:
+    metadata:
+      labels:
+        app: tsai-deployment
+    spec:
+      containers:
+      - name: my-tsai
+        image: gjim/projectscheduling
+        resources:
+          requests:
+            cpu: 400m
+        ports:
+        - containerPort: 3000

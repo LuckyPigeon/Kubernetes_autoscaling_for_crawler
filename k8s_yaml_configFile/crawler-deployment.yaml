@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crawler-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: crawler-deployment
+  template:
+    metadata:
+      labels:
+        app: crawler-deployment
+    spec:
+      containers:
+      - name: crawler
+        image: david2881234/crawler:latest
+        resources:
+          requests: 
+            cpu: 400m
+        env:
+        - name: CRAWLER_HOST
+          value: mysql
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: crawler-service
+spec:
+  ports:
+  - port: 5000
+    nodePort: 30321
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: crawler-deployment 
+  type: NodePort
