@@ -1,0 +1,848 @@
+    1  sudo poweroff
+    2  sudo apt update
+    3  sudo apt upgrade
+    4  cd
+    5  cd Downloads/
+    6  ls
+    7  gcc programAEX.c 
+    8  gcc programAEX.c -lpthread
+    9  ./a.out 
+   10  top
+   11  ls
+   12  cd ..
+   13  clear
+   14  ls
+   15  cd Downloads/
+   16  ls
+   17  vim programAEX.c 
+   18  sudo apt install vim
+   19  ls
+   20  vim programAEX.c 
+   21  ls
+   22  vim programAEX.c 
+   23  ls
+   24  cd Downloads/
+   25  ls
+   26  vim sell.c 
+   27  gcc sell.c -lpthread
+   28  ./a.out 
+   29  ls
+   30  cd Downloads/
+   31  vim sell.c 
+   32  ifconfig 
+   33  l
+   34  cd Downloads/
+   35  ls
+   36  sh ncnu_vpn.sh 
+   37  sudo apt install expect
+   38  sudo apt install openconnect
+   39  sudo ./ncnu_vpn.sh 
+   40  chmod +x ncnu_vpn.sh 
+   41  sudo ./ncnu_vpn.sh 
+   42  mkdir module
+   43  cd md
+   44  cd module/
+   45  vim module.c
+   46  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd) modules
+   47  ls
+   48  vim Makefile
+   49  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd) modules
+   50  vim module.c 
+   51  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd) modules
+   52  ls
+   53  sudo insmod module.o
+   54  sudo insmod module.ko
+   55  vim module
+   56  vim modulec
+   57  vim module.c
+   58  sudo insmod module.ko
+   59  vim module.c
+   60  cd Downloads/
+   61  s
+   62  l
+   63  vim kthread3.c 
+   64  history 
+   65  ls
+   66  vim Makefile
+   67  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd) modules
+   68  sudo insmod kthread3.ko
+   69  dmesg
+   70  vim Makefile
+   71  vim kthread3.c 
+   72  reboot
+   73  cd Downloads/
+   74  ls
+   75  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd) modules
+   76  sudo insmod kthread3.ko
+   77  dmesg 
+   78  ls
+   79  vim kthread3.c
+   80  ls
+   81  mkdir alc_mem
+   82  cd alc_mem/
+   83  ls
+   84  vim kmalloc.c
+   85  ;s
+   86  cd Downloads/
+   87  l
+   88  ls
+   89  gcc shell.c 
+   90  ./a.out 
+   91  sudo apt install fcitx
+   92  sudo apt install fcitx-chewing
+   93  cd Downloads/
+   94  l
+   95  gcc receiver.c 
+   96  ls
+   97  cd Downloads/
+   98  ls
+   99  rm -rf .
+  100  rm -rf *
+  101  ls
+  102  gcc sender.c 
+  103  date 2017
+  104  date
+  105  cal 2017
+  106  cal 2018
+  107  sudo vim /etc/nsswitch.conf 
+  108  vim /etc/hosts
+  109  dig
+  110  dig linux.vbird.org
+  111  ls
+  112  sudo apt install nginx
+  113  ls
+  114  vim /etc/nginx/sites-available/
+  115  vim /etc/nginx/sites-available/default 
+  116  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  117  sudo apt-key fingerprint 0EBFCD88
+  118  sudo apt-get install docker-ce
+  119  sudo apt update
+  120  sudo apt-get install docker-ce
+  121  sudo apt-get install docker-ce
+  122  sudo apt install docker
+  123  ls
+  124  sudo apt install docker-ce
+  125  sudo apt install docker
+  126  docker run
+  127  sudo apt install docker-io
+  128  sudo apt install docker.io
+  129  docker
+  130  ls
+  131  docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+  132  sudo docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+  133  docker show
+  134  docker --help
+  135  docker attach some-nginx
+  136  sudo docker attach some-nginx
+  137  ls
+  138  docker ps
+  139  sudo docker ps
+  140  sudo docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+  141  sudo docker attach some-nginx
+  142  sudo docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+  143  sudo docker ps -a
+  144  sudo docker start a6db35f64c2
+  145  sudo docker start some-nginx
+  146  sudo docker attach some-nginx
+  147  ls
+  148  ifconfig 
+  149  nc 
+  150  ifconfig 
+  151  nc lu localhost 5000
+  152  nc -lu localhost 5000
+  153  nc -lu localhost -p 5000
+  154  ifconfig 
+  155  nc -lu localhost 5000
+  156  man nc
+  157  nc -l localhost 5000
+  158  nc localhost 5000
+  159  sudo apt install wireshark
+  160  ls
+  161  ping 10.105.22.33
+  162  sudo wireshark
+  163  sudo apt install ssh
+  164  ssh localhost -p 12345
+  165  ls
+  166  ps -ef
+  167  ifconfig 
+  168  ping 10.105.12.112
+  169  ping 10.105.10.219
+  170  ssh -NfR 12345:localhost:22 sheng@10.105.10.219
+  171  ssh -NfR 12345:localhost:22 dondon@10.105.13.12
+  172  ssh dondon@10.105.13.12
+  173  ping 10.32.50.68
+  174  ssh -NfR 12345:localhost:22 labb13@10.32.50.68
+  175  sudo netstat -plant | grep 12345
+  176  ssh -NfR 12345:localhost:22 labb13@10.32.50.68
+  177  ssh labb13@10.32.50.68
+  178  ssh -NfR 12345:localhost:22 labb13@10.32.50.68
+  179  l
+  180  ls
+  181  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+  182  sudo apt install curl
+  183  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+  184  minikube start
+  185  git clone https://github.com/kubernetes-incubator/kubespray
+  186  ls
+  187  ps -ef
+  188  history | ssh
+  189  history | grep ssh
+  190  man ssh 
+  191  cat /etc/passwd
+  192  sudo vipw
+  193  tmux
+  194  sudo apt install tmux
+  195  tmux
+  196  top
+  197  ls
+  198  history 
+  199  exit
+  200  ps
+  201  ls
+  202  tmux
+  203  ls
+  204  echo $SHELL
+  205  vim
+  206  clear
+  207  vim
+  208  clear
+  209  vim /etc/shells 
+  210  cash
+  211  csh
+  212  cd /home
+  213  ls
+  214  cd ..
+  215  cd
+  216  chroot
+  217  ls -l /dev/{null.zero]
+  218  ls -l /dev/{null.zero}
+  219  ll /dev/{null,zero,stdin,stdout,stderr,random,tty}
+  220  adduser test
+  221  man mount
+  222  ls
+  223  vim /etc/rssh.conf
+  224  ls
+  225  vim /etc/rssh.conf
+  226  sudo apt install rssh
+  227  vim /etc/rssh.conf
+  228  sudo apt install fcitx
+  229  sudo apt install fcitx-chewing 
+  230  xdotool
+  231  sudo apt install xdotool
+  232  xdotool 
+  233  man xdotool
+  234  xdotool key Ctrl+plus
+  235  xdotool key Ctrl+0
+  236  sudo apt install mininet
+  237  ps -ef
+  238  ps -ef | grep apt
+  239  sudo apt install mininet
+  240  ls
+  241  sudo apt install mininet
+  242  ifconfig 
+  243  ping 10.32.1.254
+  244  ping 10.105.10.219
+  245  sudo mn --controller remote,ip=10.105.10.219 --topo torus,3,3
+  246  echo 1 > /proc/sys/net/ipv4/ip_forward
+  247  sudo echo 1 > /proc/sys/net/ipv4/ip_forward
+  248  su -
+  249  sudo passwd root
+  250  su -
+  251  ifconfig 
+  252  ping 8.8.8.8
+  253  sudo apt install apache2
+  254  sudo iptables -L
+  255  ifconfig 
+  256  man iptables
+  257  iptables -n
+  258  iptables -Ln
+  259  sudo iptables -Ln
+  260  sudo iptables -L -n
+  261  sudo iptables -t nat -L -n
+  262  sudo iptables-save
+  263  man iptables
+  264  sudo iptables -P INPUT DROP
+  265  sudo iptables -P INPUT REJECT
+  266  sudo iptables -P INPUT Reject
+  267  dmesg 
+  268  sudo iptables -P INPUT DROP
+  269  iptables -P OUTPUT ACCEPT
+  270  ifconfig 
+  271  sudo iptables -P OUTPUT ACCEPT
+  272  sudo iptables -P FORWARD ACCEPT
+  273  sudo iptables-save
+  274  sudo iptables -A INPUT -lo -j ACCEPT
+  275  sudo iptables -A INPUT -i lo -j ACCEPT
+  276  ifconfig 
+  277  sudo iptables -A INPUT -i enp0s5 -j ACCEPT
+  278  sudo iptables -A INPUT -i enp0s5 -s 10.32.20.246 -J DROP
+  279  sudo iptables -A INPUT -i enp0s5 -s 10.32.20.246 -j DROP
+  280  sudo iptables -AI INPUT -i enp0s5 -s 10.32.20.246 -j DROP
+  281  sudo iptables -I INPUT -i enp0s5 -s 10.32.20.246 -j DROP
+  282  sudo iptables-save
+  283  sudo iptables -A INPUT -s 10.32.20.246 -j LOG
+  284  sudo iptables -L n
+  285  sudo iptables -L -n
+  286  sudo iptables -F
+  287  sudo iptables -L n
+  288  sudo iptables -L
+  289  sudo iptables-save
+  290  ifconfig 
+  291  sudo iptables -A INPUT -i enp0s5 -p tcp --dport 80 -j ACCEPT
+  292  sudo iptables -A INPUT -m state
+  293  sudo iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+  294  ping 8.8.8.8
+  295  sudo iptables-save
+  296  ifconfig 
+  297  sudo iptables -A INPUT -p icmp --icmp-type 8 -j ACCEPT
+  298  sudo netstat -ntl
+  299  man netstat
+  300  man netstat 
+  301  sudo add-apt-repository ppa:webupd8team/java
+  302  sudo apt update
+  303  sudo apt install oracle-java8-installer 
+  304  l
+  305  javac
+  306  appviewer
+  307  appletviewer http://media.pearsoncmg.com/aw/aw_kurose_network_2/applets/dns/dns.html
+  308  ls
+  309  cd Desktop/
+  310  sudo mv wel.html /var/www/html/
+  311  sudo mv welcome.php /var/www/html/
+  312  sudo iptables-save
+  313  sudo iptables -F
+  314  sudo iptables-save
+  315  ifconfig 
+  316  l
+  317  cd /var/www/html/
+  318  ls
+  319  vim wel.html 
+  320  vim welcome.php 
+  321  ;s
+  322  ls
+  323  dmesg
+  324  ifconfig 
+  325  ping 192.168.88.233
+  326  sudo mn --controller remote,ip=192.168.88.233 --topo torus,3,3
+  327  ping 192.168.88.233
+  328  sudo mn --controller remote,ip=192.168.88.233 --topo torus,3,3
+  329  history | grep mn
+  330  sudo shutdown -h now
+  331  sudo mn --controller remote,ip=192.168.88.233 --topo torus,3,3
+  332  ping 192.168.88.233
+  333  sudo mn --controller remote,ip=192.168.88.233 --topo torus,3,3
+  334  ifconfig 
+  335  sudo mn --controller remote,ip=192.168.88.233 --topo torus,3,3
+  336  sudo mn --controller remote,ip=10.105.10.219 --topo torus,3,3
+  337  sudo ovs-ofctl dump-flows s1
+  338  sudo ovs-ofctl dump-flows s1x1
+  339  sudo ovs-ofctl dump-flows s1x
+  340  sudo ovs-ofctl dump-flows s1x2
+  341  man ulimit
+  342  man ulimit 
+  343  man ulimit 2
+  344  man ulimit 7
+  345  ulimit -a
+  346  lsof
+  347  lsof /var
+  348  lsof | grep TC{
+  349  lsof | grep TCP
+  350  man ulimit
+  351  ulimit -a
+  352  cat /proc/interrupts 
+  353  ethtool
+  354  ethtool -k enp3s0
+  355  ifconfig 
+  356  ethtool -k enp0s5
+  357  ls
+  358  cat /proc/interrupts 
+  359  ls
+  360  netstat -ntl
+  361  netstat -nt
+  362  man iptables
+  363  sudo iptables -L -n
+  364  sudo iptables-saves
+  365  sudo iptables-save 
+  366  sudo iptables-save  | grep lo
+  367  sudo apt install mininet
+  368  sudo apt autoremove 
+  369  mininet
+  370  mn
+  371  sudo mm
+  372  sudo mn
+  373  ifconfig 
+  374  ping 10.105.29.16
+  375  sudo mn --controller=remote,ip=10.105.29.16
+  376  sudo mn --controller remote,ip=10.32.29.16 --topo torus,3,3
+  377  sudo mn --controller remote,ip=10.105.29.16 --topo torus,3,3
+  378  ifconfig 
+  379  ls
+  380  uname -r
+  381  ls
+  382  mkdir module
+  383  cd module/
+  384  ls
+  385  cd ..
+  386  mkdir hookModule
+  387  cd hookModule/
+  388  ls
+  389  make
+  390  vim ip_mac_packet_logger.c 
+  391  make
+  392  vim ip_mac_packet_logger.c 
+  393  vim Makefile 
+  394  vim ip_mac_packet_logger.c 
+  395  make
+  396  vim ip_mac_packet_logger.c 
+  397  make
+  398  ls
+  399  sudo insmod ip_mac_packet_logger.ko
+  400  dmesg 
+  401  sudo rmmod ip_mac_packet_logger 
+  402  sudo insmod ip_mac_packet_logger.ko
+  403  dmesg 
+  404  sudo rmmod ip_mac_packet_logger 
+  405  dmesg 
+  406  ls
+  407  vim ip_mac_packet_logger.c
+  408  top
+  409  sudo apt install hadoop
+  410  javac
+  411  wget http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.1.0/hadoop-3.1.0.tar.gz
+  412  wget http://ftp.ubuntu-tw.net/mirror/apache-dist/hadoop/common/hadoop-3.1.0/hadoop-3.1.0.tar.gz
+  413  tar -xf hadoop-3.1.0.tar.gz 
+  414  ;s
+  415  ls
+  416  rm hadoop-3.1.0.tar.gz
+  417  rm hadoop-3.1.0.tar.gz.1
+  418  mv hadoop-3.1.0.tar.gz.2 hadoop-3.1.0.tar.gz
+  419  tar -xf hadoop-3.1.0.tar.gz 
+  420  ls
+  421  cd hadoop-3.1.0/
+  422  ls
+  423  export HADOOP_HOME=~/hadoop
+  424  export PATH=PATH:$HADOOP_HOME/bin:$HADOOPHOME/sbin
+  425  echo $PATH
+  426  export HADOOP_HOME=~/hadoop
+  427  export PATH=$PATH:$HADOOP_HOME/bin:$HADOOPHOME/sbin
+  428  echo $PATH
+  429  l
+  430  cd hadoop-3.1.0/
+  431  mkdir input
+  432  cp ./etc/hadoop/*.xml ./input
+  433  cd input/
+  434  ls
+  435  cd ..
+  436  hadoop jar
+  437  hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-*.jar grep ./input ./output 'dfs[a-z.]+'
+  438  hadoop
+  439  ls
+  440  echo $PATH
+  441  export HADOOP_HOME=~/hadoop-3.1.0
+  442  export PATH=$PATH:$HADOOP_HOME/bin:$HADOOPHOME/sbin
+  443  hadoop
+  444  hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-*.jar grep ./input ./output 'dfs[a-z.]+'
+  445  ls
+  446  cd hadoop-3.1.0/
+  447  ls
+  448  hadoop jar /home/parallels/hadoop-3.1.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar grep ./input ./output 'dfs[a-z.]+'
+  449  hadoop version
+  450  ls
+  451  cd libexec/
+  452  ls
+  453  ./hadoop-config.
+  454  ./hadoop-config.sh
+  455  cd ..
+  456  cd bin/
+  457  ./hadoop
+  458  cd ..
+  459  ls
+  460  cd ..
+  461  ls
+  462  cd Desktop/Kubernetes_autoscaling_for_crawler/
+  463  ls
+  464  python function.py 
+  465  python3 function.py 
+  466  sudo apt install python3-urllib2
+  467  sudo apt install python3-urllib
+  468  sudo apt install python3-urlli3
+  469  sudo apt install python3-urllib3
+  470  vim function.py 
+  471  python3 function.py 
+  472  vim function.py 
+  473  pip install urllib2
+  474  sudo apt install python-pip
+  475  pip install urllib
+  476  pip search urllib
+  477  pip3 install urllib
+  478  ls
+  479  sudo pip3 install --upgrade pip
+  480  sudo apt install python3-pip
+  481  sudo pip3 install --upgrade pip
+  482  sudo -H pip3 install --upgrade pip
+  483  python3 function.py 
+  484  sudo -H pip install selenium
+  485  sudo -H pip3 install selenium
+  486  python3 function.py 
+  487  sudo -H pip3 install flash
+  488  sudo -H pip3 install flask
+  489  python3 function.py 
+  490  ls
+  491  python3 function.py 
+  492  cd 
+  493  cd Desktop/
+  494  su -
+  495  ls
+  496  cd Kubernetes_autoscaling_for_crawler/
+  497  ls
+  498  python3 function.py 
+  499  ls
+  500  vim function.py 
+  501  python3 function.py 
+  502  vim function.py 
+  503  python3 function.py 
+  504  vim function.py 
+  505  python3 function.py 
+  506  vim function.py 
+  507  python3 function.py 
+  508  vim function.py 
+  509  python3 function.py 
+  510  vim function.py 
+  511  python3 function.py 
+  512  vim function.py 
+  513  cd Desktop/Kubernetes_autoscaling_for_crawler/
+  514  git pull
+  515  git reset
+  516  git pull
+  517  cd ..
+  518  rm -rf Kubernetes_autoscaling_for_crawler/
+  519  cd
+  520  git clone https://github.com/LuckyPigeon/Kubernetes_autoscaling_for_crawler.git
+  521  clear
+  522  top
+  523  vim function.py 
+  524  ls
+  525  tp[
+  526  top
+  527  l
+  528  cd Kubernetes_autoscaling_for_crawler/
+  529  git pull
+  530  ls
+  531  cd ..
+  532  cd Kubernetes_autoscaling_for_crawler/Function/
+  533  ls
+  534  python3 function.py 
+  535  pip3 install -r requirements.txt 
+  536  ls
+  537  cd ../
+  538  git pull
+  539  cd Function/
+  540  pip3 install -r requirements.txt 
+  541  sudo -H pip3 install -r requirements.txt 
+  542  ls
+  543  python3 function.py 
+  544  sudo -H pip3 install _version
+  545  vim requirements.txt 
+  546  vim function.py 
+  547  ls
+  548  vim function.py 
+  549  cd ..
+  550  git pull
+  551  ks
+  552  l
+  553  cd Function/
+  554  ls
+  555  vim function.py 
+  556  lks
+  557  l
+  558  ls
+  559  cd Kubernetes_autoscaling_for_crawler/
+  560  ls
+  561  cd Function/
+  562  ls
+  563  vim function.py 
+  564  python3 function.py 
+  565  vim function.py 
+  566  python3 function.py 
+  567  vim function.py 
+  568  sudo -H pip3 install -r requirements.txt 
+  569  python3 function.py 
+  570  vim function.py 
+  571  python3 function.py 
+  572  vim function.py 
+  573  python3 function.py 
+  574  vim function.py 
+  575  python3 function.py 
+  576  vim function.py 
+  577  python3 function.py 
+  578  vim function.py 
+  579  python3 function.py 
+  580  vim function.py 
+  581  python3 function.py 
+  582  vim function.py 
+  583  python3 function.py 
+  584  vim function.py 
+  585  python3 function.py 
+  586  vim function.py 
+  587  python3 function.py 
+  588  vim function.py 
+  589  python3 function.py 
+  590  cd ..
+  591  ls
+  592  git
+  593  git --version
+  594  vim function.py 
+  595  cd Function/
+  596  vim function.py 
+  597  cd ..
+  598  git add .
+  599  git commit -m "check crawler done!"
+  600  git config --global user.email "david2881234@gmail.com"
+  601  git push
+  602  python3 function.py 
+  603  cd Function/
+  604  python3 function.py 
+  605  vim function.py 
+  606  python3 function.py 
+  607  ls
+  608  ll
+  609  ./chromedriver 
+  610  vim function.py 
+  611  vim Dockerfile 
+  612  ls
+  613  vim Dockerfile 
+  614  vim function.py 
+  615  docker 
+  616  docker build .
+  617  sudo docker build .
+  618  vim function.py 
+  619  vim Dockerfile 
+  620  sudo docker build.
+  621  sudo docker build .
+  622  vim Dockerfile 
+  623  sudo vim /etc/default/docker
+  624  sudo service docker restart
+  625  sudo docker build .
+  626  docker image ls
+  627  sudo docker image ls
+  628  sudo docker tag 57a6092c2155 david2881234/crawler
+  629  sudo docker image ls
+  630  sudo docker push david2881234/crawler
+  631  docker login --username=david2881234 --email=david2881234@gmail.com
+  632  sudo docker login --username=david2881234 --email=david2881234@gmail.com
+  633  sudo docker push david2881234/crawler
+  634  ls
+  635  vim function.py 
+  636  vim Dockerfile 
+  637  sudo docker rmi david2881234/crawler
+  638  sudo docker build .
+  639  sudo docker image ls
+  640  sudo docker tag ad3563709942 david2881234/crawler
+  641  sudo docker push david2881234/crawler
+  642  vim function.py 
+  643  python3 function.py 
+  644  vim function.py 
+  645  export CRAWLER_HOST=localhost
+  646  export CRAWLER_USER=root
+  647  export CRAWLER_PASSWORD=password
+  648  python3 function.py 
+  649  ls
+  650  cd ..
+  651  cd Function/
+  652  sudo docker rmi david2881234/crawler
+  653  sudo docker build .
+  654  sudo docker image ls
+  655  sudo docker tag 0b96d421ac44 david2881234/crawler
+  656  sudo docker push david2881234/crawler
+  657  vim Dockerfile 
+  658  docker build .
+  659  sudo docker build .
+  660  sudo docker image ls
+  661  docker run 76f372910849
+  662  sudo docker run 76f372910849
+  663  top
+  664  sudo docker ps
+  665  sudo docker stop 0af24c4fb7ac
+  666  cd Kubernetes_autoscaling_for_crawler/
+  667  ls
+  668  cd Function/
+  669  ls
+  670  vim Dockerfile 
+  671  vim function.py 
+  672  vim Dockerfile 
+  673  sudo docker build . -t tes
+  674  sudo docker run -p 5000:5000 test
+  675  sudo docker image ls
+  676  sudo docker run -p 5000:5000 fac03c46d3f3
+  677  vim function.py 
+  678  python3 function.py 
+  679  vim function.py 
+  680  python3 function.py 
+  681  vim function.py 
+  682  python3 function.py 
+  683  vim function.py 
+  684  python3 function.py 
+  685  export CRAWLER_HOST=localhost
+  686  export CRAWLER_USER=root
+  687  export CRAWLER_PASSWORD=password
+  688  python3 function.py 
+  689  vim Dockerfile 
+  690  sudo docker build .
+  691  sudo docker build . -t test2
+  692  sudo docker image ls
+  693  sudo docker run -p 5000:5000 02f1041f6303
+  694  vim Dockerfile 
+  695  sudo docker build . test3
+  696  sudo docker build . -t test3
+  697  ls
+  698  sudo docker image ls
+  699  sudo docker run -p 5000:5000 d6fcfabbe004
+  700  cc
+  701  vim Dockerfile 
+  702  sudo docker build . -t test4
+  703  vim Dockerfile 
+  704  sudo docker build . -t test3
+  705  sudo docker build . -t test5
+  706  su -
+  707  vi
+  708  python3 function.py 
+  709  vim Dockerfile 
+  710  python3 function.py 
+  711  vim Dockerfile 
+  712  vim function.py 
+  713  python3 function.py 
+  714  vim function.py 
+  715  python3 function.py 
+  716  vim function.py 
+  717  python3 function.py 
+  718  vim function.py 
+  719  python3 function.py 
+  720  vim function.py 
+  721  python3 function.py 
+  722  vim function.py 
+  723  python3 function.py 
+  724  vim function.py 
+  725  python3 function.py 
+  726  vim function.py 
+  727  python3 function.py 
+  728  vim function.py 
+  729  python3 function.py 
+  730  '
+  731  ls
+  732  vim Dockerfile 
+  733  vim function.py 
+  734  vim Dockerfile 
+  735  python3 function.py 
+  736  sudo docker build . -t test6
+  737  sudo vim /etc/default/docker
+  738  sudo docker build . -t test6
+  739  sudo docker image ls
+  740  sudo docker run -p 5000:5000 72ae6afdc245
+  741  vim function.py 
+  742  python3 function.py 
+  743  vim function.py 
+  744  python3 function.py 
+  745  sudo docker build . -t test7
+  746  sudo docker build . -t test6
+  747  sudo docker image ls
+  748  sudo docker run -p 5000:5000 a56d0d9b14b9
+  749  sudo rmi a56d0d9b14b9
+  750  sudo docker rmi a56d0d9b14b9
+  751  sudo docker rmi 0b96d421ac44
+  752  df -h
+  753  vim function.py 
+  754  python3 function.py 
+  755  ls
+  756  sudo docker build . -t david2881234/crawler
+  757  sudo docker image ls
+  758  sudo docker push david2881234/crawler
+  759  ping 10.32.88.1
+  760  mysql -u root -p -h 10.32.88.1:32203
+  761  vim function.py 
+  762  cd ..
+  763  git add .
+  764  git commit -m "complete"
+  765  git push
+  766  git pull
+  767  ls
+  768  cd Function/
+  769  ls
+  770  vim function.py 
+  771  git add .
+  772  cd ..
+  773  git commit -m "complete"
+  774  git push
+  775  vim function.py 
+  776  cd Function/
+  777  ls
+  778  vim Dockerfile 
+  779  git push
+  780  cd ..
+  781  gti add .
+  782  git add .
+  783  git commit -m "dockerfile complete"
+  784  git push
+  785  vim /etc/mysql/my.cnf
+  786  /usr/sbin/mysqld --verbose --help | grep -A 1 'Default options'
+  787  sudo vim /etc/mysql/my.cnf
+  788  sudo service mysql restart
+  789  sudo apt purge google-chrome-stable 
+  790  sudo docker stop 76f372910849
+  791  sudo docker ps
+  792  sudo docker stop c39902ec7c29
+  793  sudo docker ps
+  794  sudo docker image ls
+  795  sudo docker run --name web -p 5000:5000 76f372910849
+  796  sudo docker ps
+  797  sudo docker stop e26875bfc72b
+  798  sudo docker ps
+  799  sudo docker stop faaff5ac8e4f
+  800  sudo docker ps
+  801  sudo docker stop e14946629420
+  802  sudo docker ps 
+  803  sudo docer stop 1aa67d7ee8ac
+  804  sudo docker stop 1aa67d7ee8ac
+  805  sudo docker ps
+  806  sudo docker stop d867724e120c
+  807  sudo apt install mysql
+  808  sudo apt install mysql-server
+  809  ls
+  810  mysql -u root -p
+  811  cd Desktop/
+  812  ls
+  813  cd ..
+  814  ls
+  815  cd Kubernetes_autoscaling_for_crawler/
+  816  git pull
+  817  ls
+  818  cd Function/
+  819  ls
+  820  vim function.py 
+  821  python3 function.py 
+  822  export CRAWLER_HOST=localhost
+  823  export CRAWLER_USER=root
+  824  export CRAWLER_PASSWORD=password
+  825  python3 function.py 
+  826  vim function.py 
+  827  ls
+  828  sudo docker image ls
+  829  sudo docker rmi david2881234/crawler
+  830  vim Dockerfile 
+  831  sudo docker build . -t david2881234/crawler
+  832  l
+  833  sudo docker push david2881234/crawler
+  834  history 
+  835  ls
+  836  history 
+  837  history >> history.txt
+  838  cat history.txt 
+  839  ;s
+  840  ls
+  841  history 
+  842  ls
+  843  cd Kubernetes_autoscaling_for_crawler/
+  844  git pull
+  845  ls
+  846  cd k8s_yaml_configFile/
+  847  ls
+  848  history >> history.txt
